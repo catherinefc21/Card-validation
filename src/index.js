@@ -3,7 +3,11 @@ import validator from './validator.js';
 const boton=document.getElementById("boton");
 const input= document.getElementById("cardnumber")
 boton.addEventListener("click", () => {
-  
+  const form = document.querySelector('form');
+  if (!form.checkValidity()) {
+    alert("Por favor complete todos los campos requeridos.");
+    return;
+  }
   const saveInput = input.value
   let numero = validator.isValid(saveInput)
   if (numero === true){
