@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+footer{
+    height: 7vh;/*altura*/
+    display: flex;
+    justify-content: flex-end;
+    color: #000441;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 550;
+    font-size: 13px;
+    
+}
+header{
+    height: 100px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content:space-between;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    align-items: center;
+    padding: 0px 40px;
+}
+
+nav a{
+    text-decoration: none; /*le saque el subrayado de link*/
+    color: rgb(3, 42, 92);
+}
+header nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none; /*desaparezcan los puntos de lista*/
+}
+
+body{
+    background-image:url(image/fondo.jpg);
+    background-size: cover;
+    
+    height: 100vb; /*tamaño de la pantalla*/
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+       
+} 
+
+.contenedor{ 
+    height: 90%; /*el 70% del body (100vb)*/
+    display: flex; /*para lograr que puedan quedar uno al lado del otro*/
+    gap: 20px; /*espacio entre contenedores*/
+    padding: 20px; /*para darle espacio en los bordes a cada contenedor*/
+
+}
+.section1{
+    width: 50%; /*para que ocupe mitad y mitad de contenedor*/
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: #000441;
+}
+.section2{
+    width: 30%;
+    background-color: #f0f8fd;
+    padding: 15px 20px;
+    box-shadow: 0 0 20px rgba(0,0,0.1);
+    border-radius: 20px; /*redondear bordes*/
+    text-align: center;
+    flex-direction: center;
+    margin: 40px;
+    color: #000441;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+}
+p{
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#img{
+    width: 100px;
+    flex-direction: column;
+    justify-content: right;
+}
+.input-group{
+    display:flex;
+    flex-direction: column; /*Poner en columnas*/
+    text-align: left; /*Poner texto a la izquiera*/
+}
+input, textarea{
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    background-color: #e3edf0;
+    border: 2px solid #F0FAF1;
+    color: rgb(25, 49, 30);
+    outline: none; /*quitar borde de los input*/
+}
+.othertext {
+    margin-bottom: 20px;
+    display:flex; /*separa política de términos*/
+    justify-content: space-between;
+    text-align: center;
+}
+.othertext a {
+    color:#7692b2;
+    font-size: 12px;
+    text-decoration: none;/*para quitar enlaces de links*/
+    font-weight: 600; /*grosor de las letras*/
+}
+button{
+    font-size: 15px;
+    color:#FFFF;
+    border: 0 ;
+    border-radius: 25px;
+    background-color: #000441;
+    box-shadow: 0 0 20px rgb(6, 35, 78);
+    cursor:pointer; 
+    padding: 9px 13px;
+
+}
+button{
+    font-size: 12px;
+    color:#FFFF;
+    border: 0 ;
+    border-radius: 25px;
+    background-color: #000441;
+    box-shadow: 0 0 20px rgb(6, 35, 78);
+    cursor:pointer; 
+    padding: 9px 13px;
+    width: 100%;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

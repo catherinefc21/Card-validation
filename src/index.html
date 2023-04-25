@@ -6,9 +6,47 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <div>
+        <img id="logo" src="image/logo.png">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="">Inicio</a></li>
+          <li><a href="">Beneficios</a></li>
+          <li><a href="">Tus tarjetas</a></li>
+          <li><a href="">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="contenedor">
+      <div class="section1">
+        <h2><br>¡Bienvenida(a)!<br>Rellena el formulario y agrega tu tarjeta</h2><br>
+        <img id= "img" src="image/flecha.png"><br><br><br>
+        <label class="customername"></label> 
+      </div>  
+      <div class="section2">
+        <p>Validación de Tarjeta</p>
+          <section class="input-group">
+          <label for="cardnumber">Número de tarjeta</label>
+          <input type="text" name="cardnumber" id="cardnumber" placeholder="xxxx xxxx xxxx xxxx" maxlength="16" required>
+          
+          <label for="name">Nombre del Titular</label>
+          <input type="text" name="name" id="name" placeholder="Nombre y apellido" required>
+          
+          <label>Vencimiento Mes/Año</label>
+          <input type="month" name="date" id="date" required>
+          <label for="cvv">CVV</label>
+          <input type="number" name="cvv" id="cvv" placeholder="xxx" required>
+          </section>
+          <section class="othertext">
+            <a href="#">Politica de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+          </section> 
+          <button id="boton">ENVIAR</button>
+      </div> 
+    </div>
+    <footer class="footer">Copyright Digital Pay 2023©</footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
