@@ -22,7 +22,7 @@
     <div class="contenedor">
       <div class="section1">
         <h2><br>¡Bienvenida(a)!<br>Rellena el formulario y agrega tu tarjeta</h2><br>
-        <img id= "img" src="image/flecha.png"><br><br><br>
+        <img id= "img" src="image/flecha.png"><br>
         <label id="customername"></label> 
       </div>  
       <div class="section2">
@@ -38,14 +38,14 @@
           <label>Vencimiento Mes/Año</label>
           <input type="month" name="date" id="date" required>
           <label for="cvv">CVV</label>
-          <input type="number" name="cvv" id="cvv" placeholder="xxx" required>
+          <input type="number" name="cvv" id="cvv" placeholder="xxx" maxlength="3" required>
           </section>
           <section class="othertext">
             <a href="#">Politica de privacidad</a>
             <a href="#">Términos y condiciones</a>
-          </section> 
-          <button id="boton">ENVIAR</button>
+          </section>
         </form>
+          <button id="boton">ENVIAR</button>
       </div> 
     </div>
     <footer class="footer">Copyright Digital Pay 2023©</footer>

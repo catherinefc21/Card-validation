@@ -2,6 +2,16 @@ import validator from './validator.js';
 
 const boton=document.getElementById("boton");
 const input= document.getElementById("cardnumber")
+
+// Definir la función que permite solo números
+function soloNumeros(e) {
+  e.target.value = e.target.value.replace(/\D/g, '');
+}
+
+// Asociar la función al evento "input" en el input
+input.addEventListener("input", soloNumeros);
+
+
 boton.addEventListener("click", () => {
   const form = document.querySelector('form');
   if (!form.checkValidity()) {
