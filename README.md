@@ -2,11 +2,11 @@
 
 ## Índice
 
-* [1. Resumen del Proyecto](#1-Resumen del Proyecto)
-* [2. Los objetivos generales de este proyecto son los siguientes](#2-Los objetivos generales de este proyecto son los siguientes)
-* [3. Usuarios de la app web](#3-Usuarios de la app web)
-* [4. Uso](#4-Uso)
-* [5. Plan de actividades](#5-Plan de actividades)
+* 1. Resumen del Proyecto
+* 2. Los objetivos generales de este proyecto son los siguientes
+* 3. Usuarios de la app web
+* 4. Uso
+* 5. Plan de actividades
 
 ***
 
@@ -42,12 +42,12 @@ fácil y seguro para realizar sus compras por internet.
 En la aplicación se encuentra un formulario en donde se deben ingresar los datos
 del usuario; Número de tarjeta, nombre, Fecha de expiración de tarjeta y CVV.
 
-![foto1](/images/1.JPG)
+![foto1](/images/2.JPG)
 
 Al hacer click, la app arroja un mensaje validando la tarjeta ingresada. Si fue validada
 su tarjeta ha sido ingresada con éxito a la billetera.
 
-![foto2](/images/2.JPG)
+![foto2](/images/1.JPG)
 
 ## 5. Plan de Actividades
 * Análisis del proyecto.
