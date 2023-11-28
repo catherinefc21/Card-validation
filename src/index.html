@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <div>
-        <img id="logo" src="image/logo.png">
+      <div class="logo">
+        <img src="image/logo.png" alt="logo" />
       </div>
       <nav>
         <ul>
@@ -22,32 +22,54 @@
     </header>
     <div class="contenedor">
       <div class="section1">
-        <h2><br>¡Bienvenido(a)!<br>Rellena el formulario y agrega tu tarjeta</h2><br>
-        <img id= "img" src="image/flecha.png"><br><br><br>
-        <p id="customername"></p> 
-      </div>  
+        <h1>¡Bienvenido(a)!</h1>
+        <p>Rellena el formulario y agrega tu tarjeta</p>
+        <br />
+        <img class="img" src="image/tarjeta.png" alt="img" />
+        <p id="customername"></p>
+      </div>
       <div class="section2">
-        <form>
-        <p>Validación de Tarjeta</p>
+        <form class="form" id="formulario">
+          <h2>Validación de Tarjeta</h2>
           <section class="input-group">
-          <label for="cardnumber">Número de tarjeta</label>
-          <input type="text" name="cardnumber" id="cardnumber" placeholder="xxxx xxxx xxxx xxxx" maxlength="16" required>
-          
-          <label for="name">Nombre del Titular</label>
-          <input type="text" name="name" id="name" placeholder="Nombre y apellido" required>
-          
-          <label>Vencimiento Mes/Año</label>
-          <input type="month" name="date" id="date" required>
-          <label for="cvv">CVV</label>
-          <input type="number" name="cvv" id="cvv" placeholder="xxx" maxlength="3" required>
+            <label for="cardnumber">Número de tarjeta</label>
+            <input
+              type="text"
+              name="cardnumber"
+              id="cardnumber"
+              placeholder="xxxx xxxx xxxx xxxx"
+              maxlength="19"
+              required
+            />
+
+            <label for="name">Nombre del Titular</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Nombre y apellido"
+              required
+            />
+
+            <label>Vencimiento Mes/Año</label>
+            <input type="month" name="date" id="date" required />
+            <label for="cvv">CVV</label>
+            <input
+              type="number"
+              name="cvv"
+              id="cvv"
+              placeholder="xxx"
+              maxlength="3"
+              required
+            />
           </section>
           <section class="othertext">
             <a href="#">Politica de privacidad</a>
             <a href="#">Términos y condiciones</a>
           </section>
+          <button type="submit">ENVIAR</button>
         </form>
-          <button id="boton">ENVIAR</button>
-      </div> 
+      </div>
     </div>
     <footer class="footer">Copyright Digital Pay 2023©</footer>
     <script src="index.js" type="module"></script>

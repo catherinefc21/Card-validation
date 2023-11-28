@@ -1,37 +1,51 @@
-import validator from './validator.js';
+import validator from "./validator.js";
 
-const boton=document.getElementById("boton");
-const input= document.getElementById("cardnumber")
+const cardNumber = document.getElementById("cardnumber");
+const customerName = document.getElementById("customername");
+const userName = document.getElementById("name");
+const cvvField = document.getElementById("cvv");
+const formulario = document.getElementById("formulario");
 
 // Definir la función que permite solo números
-function soloNumeros(e) {
-  e.target.value = e.target.value.replace(/\D/g, ''); //cualquier caracter que no sea dígito, g busca y reemplaza
+function formatCreditCardNumber(e) {
+  // Eliminar cualquier caracter que no sea un dígito
+  let cleanedValue = e.target.value.replace(/\D/g, "");
+  // Agregar espacios después de cada grupo de cuatro dígitos
+  cleanedValue = cleanedValue.replace(/(\d{4})(?=\d)/g, "$1 ");
+  // Asignar el valor formateado de nuevo al campo
+  e.target.value = cleanedValue;
 }
 
-// Asociar la función al evento "input" en el input
-input.addEventListener("input", soloNumeros);
+// Función de validación y actualización del contenido
+function validarTarjeta(e) {
+  e.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
+  const inputValue = cardNumber.value;
+  const isValid = validator.isValid(inputValue);
+  const mensaje = isValid
+    ? "ha sido validada con éxito."
+    : "es Inválida. Intenta nuevamente.";
 
-boton.addEventListener("click", () => {
-  //eviar alertar cuando se envie el formulario con campos vacios
-  const form = document.querySelector('form');
-  if (!form.checkValidity()) {
-    alert("Por favor completar los campos requeridos.");
-    return;
-  }
-  const saveInput = input.value
-  let numero = validator.isValid(saveInput)
-  if (numero === true){
-    numero = "ha sido validada con éxito."
-  }else{
-    numero = "es Inválida. Intenta nuevamente."
-  }
-  //Mensaje de validación de la tarjeta
+  const formattedName =
+    userName.value.charAt(0).toUpperCase() +
+    userName.value.slice(1).toLowerCase();
 
-  document.getElementById("customername").innerHTML= document.getElementById("name").value + ", tu tarjeta  " + numero;
-    
-  //lograr que al escribir se enmascaren los números
-  const enmascarar= validator.maskify(saveInput)
-  input.value=enmascarar;
+  customerName.textContent = formattedName + ", tu tarjeta " + mensaje;
 
-})
+  // Enmascarar los números
+  cardNumber.value = validator.maskify(inputValue);
+}
+
+// Función para el CVV que permite solo números y tiene una longitud máxima de 3 dígitos
+function soloNumerosCVV(e) {
+  e.target.value = e.target.value.replace(/\D/g, "").slice(0, 3);
+}
+
+// Asociar la función al evento "input" en el input de tarjeta
+cardNumber.addEventListener("input", formatCreditCardNumber);
+
+// Asociar la función al evento "input" en el input de CVV
+cvvField.addEventListener("input", soloNumerosCVV);
+
+// Asociar la función al evento "submit" en el formulario
+formulario.addEventListener("submit", validarTarjeta);
